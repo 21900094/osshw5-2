@@ -9,9 +9,10 @@ const UpdatePage = () => {
   const [editCount, setEditCount] = useState(0);
   const inputRefs = useRef({});
 
-  useEffect(() => {
-    fetchProduct();
-  }, []);
+// Example fix for useEffect in DetailPage.js
+useEffect(() => {
+    fetchProduct(); // Call your function
+  }, [fetchProduct]); // Add 'fetchProduct' to the dependency array
 
   const fetchProduct = async () => {
     try {

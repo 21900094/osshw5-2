@@ -7,9 +7,10 @@ const DetailPage = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
 
-  useEffect(() => {
-    fetchProduct();
-  }, []);
+// Example fix for useEffect in DetailPage.js
+useEffect(() => {
+    fetchProduct(); // Call your function
+  }, [fetchProduct]); // Add 'fetchProduct' to the dependency array
 
   const fetchProduct = async () => {
     try {
