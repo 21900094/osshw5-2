@@ -8,8 +8,8 @@ const DetailPage = () => {
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
-    fetchProduct();
-  }, []);
+    // Your useEffect code
+  }, [fetchProduct]); // Add fetchProduct as a dependency
 
   const fetchProduct = async () => {
     try {
