@@ -68,7 +68,7 @@ const App = () => {
 
   return (
     <div className="container">
-      <h2>상품 정보 CRUD</h2>
+      <h2>상품 정보 CRUD / 5.2</h2>
       <button onClick={fetchProducts} className="getbutton">
         전체 목록 가져오기
       </button>
