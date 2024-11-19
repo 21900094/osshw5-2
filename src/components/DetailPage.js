@@ -8,8 +8,8 @@ const DetailPage = () => {
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
-    // Your useEffect code
-  }, [fetchProduct]); // Add fetchProduct as a dependency
+    fetchProduct();
+  }, []);
 
   const fetchProduct = async () => {
     try {
@@ -21,7 +21,7 @@ const DetailPage = () => {
     }
   };
 
-  if (!product) return <div></div>;
+  if (!product) return <div>Loading...</div>;
 
   return (
     <div className="container">
